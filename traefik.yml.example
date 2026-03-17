@@ -1,0 +1,64 @@
+# Traefik Configuration File
+# Colocar en /etc/traefik/traefik.yml en el servidor Ubuntu
+
+global:
+  checkNewVersion: true
+  sendAnonymousUsage: false
+
+api:
+  dashboard: true
+  insecure: false
+
+entryPoints:
+  web:
+    address: ":80"
+    http:
+      redirections:
+        entryPoint:
+          to: websecure
+          scheme: https
+          permanent: true
+  
+  websecure:
+    address: ":443"
+    http:
+      tls:
+        certResolver: letsencrypt
+        domains:
+          - main: www.cohortevidaypaz.com.co
+            sans:
+              - cohortevidaypaz.com.co
+
+providers:
+  docker:
+    endpoint: "unix:///var/run/docker.sock"
+    exposedByDefault: false
+    network: traefik-network
+
+certificatesResolvers:
+  letsencrypt:
+    acme:
+      email: admin@cohortevidaypaz.com.co
+      storage: /acme.json
+      httpChallenge:
+        entryPoint: web
+      dnsChallenge:
+        provider: cloudflare
+
+log:
+  level: INFO
+  filePath: /var/log/traefik/traefik.log
+  format: json
+
+accessLog:
+  filePath: /var/log/traefik/access.log
+  format: json
+
+ping:
+  entryPoint: web
+
+metrics:
+  prometheus:
+    entryPoint: web
+    addEntryPointsLabels: true
+    addServicesLabels: true

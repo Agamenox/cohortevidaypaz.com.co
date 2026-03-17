@@ -1,0 +1,13 @@
+.git
+.gitignore
+README.md
+.env
+.env.example
+docker-compose.yml
+Dockerfile
+nginx.conf
+traefik.yml.example
+*.md
+.DS_Store
+node_modules
+npm-debug.log

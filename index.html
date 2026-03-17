@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cohorte Vida y Paz - Estudio longitudinal de la Generación de la Vida y de la Paz en Colombia">
+    <meta name="keywords" content="cohorte, vida, paz, investigación, niños, Colombia, estudio longitudinal">
+    <title>Cohorte Vida y Paz | Generación de la Vida y de la Paz</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#00f7ff;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#7b2cbf;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#00f7ff;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="50" cy="50" r="45" fill="none" stroke="url(#logoGradient)" stroke-width="2" opacity="0.3"/>
+                    <circle cx="50" cy="50" r="35" fill="none" stroke="url(#logoGradient)" stroke-width="3"/>
+                    <path d="M50 15 L50 35 M50 65 L50 85 M15 50 L35 50 M65 50 L85 50" stroke="url(#logoGradient)" stroke-width="3" stroke-linecap="round"/>
+                    <circle cx="50" cy="50" r="8" fill="url(#logoGradient)"/>
+                    <circle cx="50" cy="50" r="15" fill="none" stroke="url(#logoGradient)" stroke-width="1.5"/>
+                </svg>
+                <span class="logo-text">COHORTE VIDA Y PAZ</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#sobre-nosotros" class="nav-link">Sobre Nosotros</a></li>
+                <li><a href="#cohortes" class="nav-link">Cohortes</a></li>
+                <li><a href="#metodologia" class="nav-link">Metodología</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section id="inicio" class="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-pulse"></span>
+                    INVESTIGACIÓN LONGITUDINAL
+                </div>
+                <h1 class="hero-title">
+                    Generación de la
+                    <span class="gradient-text">Vida y de la Paz</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Estudio longitudinal de niños y niñas nacidos en Colombia después del 7 de agosto de 2022,
+                    analizando su desarrollo en una nueva etapa de paz
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="2022">0</div>
+                        <div class="stat-label">Año de Inicio</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="2">0</div>
+                        <div class="stat-label">Cohortes</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="100">0</div>
+                        <div class="stat-label">Compromiso %</div>
+                    </div>
+                </div>
+                <div class="hero-cta">
+                    <a href="#sobre-nosotros" class="btn btn-primary">
+                        <span class="btn-text">Conocer más</span>
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                        </svg>
+                    </a>
+                    <a href="#contacto" class="btn btn-secondary">
+                        <span class="btn-text">Participar</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="dna-helix">
+                    <div class="helix-strand helix-1"></div>
+                    <div class="helix-strand helix-2"></div>
+                </div>
+                <div class="floating-elements">
+                    <div class="floating-element element-1"></div>
+                    <div class="floating-element element-2"></div>
+                    <div class="floating-element element-3"></div>
+                    <div class="floating-element element-4"></div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <div class="scroll-indicator">
+                <span class="scroll-text">Descubre</span>
+                <svg class="scroll-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M12 5v14M5 12l7 7 7-7"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre-nosotros" class="about">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">SOBRE EL PROYECTO</div>
+                <h2 class="section-title">Investigación para el Futuro</h2>
+                <p class="section-subtitle">
+                    Analizamos el desarrollo de la cohorte mediante estudios poblacionales y seguimiento de indicadores
+                </p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 64 64" fill="none">
+                            <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="2"/>
+                            <path d="M32 16v32M20 32h24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="32" cy="32" r="6" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Estudio Longitudinal</h3>
+                    <p class="card-text">
+                        Seguimiento continuo del desarrollo infantil en el contexto de paz en Colombia,
+                        identificando factores que influyen en el crecimiento integral.
+                    </p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 64 64" fill="none">
+                            <rect x="8" y="8" width="48" height="48" rx="8" stroke="currentColor" stroke-width="2"/>
+                            <path d="M16 24h32M16 32h32M16 40h20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="44" cy="44" r="6" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Indicadores de Desarrollo</h3>
+                    <p class="card-text">
+                        Análisis de indicadores de salud, educación y bienestar para evaluar el impacto
+                        de las políticas públicas en la primera infancia.
+                    </p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 64 64" fill="none">
+                            <path d="M32 8l8 16h-16l8-16z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            <rect x="16" y="24" width="32" height="32" rx="4" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="32" cy="40" r="8" stroke="currentColor" stroke-width="2"/>
+                            <path d="M32 32v16M24 40h16" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Compromiso Social</h3>
+                    <p class="card-text">
+                        Contribuimos a la construcción de paz a través de evidencia científica que informe
+                        decisiones y políticas para el bienestar de la niñez.
+                    </p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 64 64" fill="none">
+                            <path d="M32 8L8 20v24l24 12 24-12V20L32 8z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M8 20l24 12 24-12M32 32v20" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="32" cy="32" r="8" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Excelencia Científica</h3>
+                    <p class="card-text">
+                        Metodología rigurosa y análisis estadístico avanzado para garantizar la validez
+                        y confiabilidad de los resultados del estudio.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cohortes" class="cohorts">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">NUESTRAS COHORTES</div>
+                <h2 class="section-title">Generación Vida y Paz</h2>
+                <p class="section-subtitle">
+                    Dos cohortes de estudio diseñadas para comprender el desarrollo infantil en Colombia
+                </p>
+            </div>
+            <div class="cohorts-container">
+                <div class="cohort-card cohort-primary">
+                    <div class="cohort-badge">COHORTE 1</div>
+                    <div class="cohort-icon">
+                        <svg viewBox="0 0 80 80" fill="none">
+                            <circle cx="40" cy="40" r="36" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="40" cy="40" r="24" stroke="currentColor" stroke-width="1.5"/>
+                            <circle cx="40" cy="40" r="12" fill="currentColor"/>
+                            <path d="M40 8v8M40 64v8M8 40h8M64 40h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="cohort-title">Generación Principal</h3>
+                    <div class="cohort-date">
+                        <svg class="calendar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <rect x="3" y="4" width="18" height="18" rx="2" stroke-width="2"/>
+                            <path d="M16 2v4M8 2v4M3 10h18" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <span>Desde 7 de agosto de 2022</span>
+                    </div>
+                    <p class="cohort-description">
+                        Niños y niñas nacidos después del 7 de agosto de 2022, definidos como la "Generación de la Vida y de la Paz".
+                        Esta cohorte principal representa el inicio de una nueva etapa en Colombia.
+                    </p>
+                    <div class="cohort-features">
+                        <div class="feature-item">
+                            <svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Seguimiento completo</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Indicadores de desarrollo</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Análisis longitudinal</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cohort-card cohort-secondary">
+                    <div class="cohort-badge">COHORTE 2</div>
+                    <div class="cohort-icon">
+                        <svg viewBox="0 0 80 80" fill="none">
+                            <circle cx="40" cy="40" r="36" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="40" cy="40" r="24" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M28 40l8 8 16-16" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="cohort-title">Piloto Expandido</h3>
+                    <div class="cohort-date">
+                        <svg class="calendar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <rect x="3" y="4" width="18" height="18" rx="2" stroke-width="2"/>
+                            <path d="M16 2v4M8 2v4M3 10h18" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <span>7 ago 2020 - 6 ago 2022</span>
+                    </div>
+                    <p class="cohort-description">
+                        Cohorte piloto que incluye el seguimiento de niños nacidos entre el 7 de agosto de 2020 y el 6 de agosto de 2022,
+                        permitiendo comparaciones y análisis de transición.
+                    </p>
+                    <div class="cohort-features">
+                        <div class="feature-item">
+                            <svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Estudio comparativo</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Análisis de transición</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Validación metodológica</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="metodologia" class="methodology">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">METODOLOGÍA</div>
+                <h2 class="section-title">Enfoque Técnico</h2>
+                <p class="section-subtitle">
+                    Identificamos elementos técnicos, operativos y de gestión para el desarrollo efectivo del estudio
+                </p>
+            </div>
+            <div class="methodology-grid">
+                <div class="method-item">
+                    <div class="method-number">01</div>
+                    <h3 class="method-title">Recolección de Datos</h3>
+                    <p class="method-text">
+                        Implementamos sistemas estandarizados para la recolección de información
+                        clínica, demográfica y social de cada participante.
+                    </p>
+                </div>
+                <div class="method-item">
+                    <div class="method-number">02</div>
+                    <h3 class="method-title">Análisis Estadístico</h3>
+                    <p class="method-text">
+                        Aplicamos modelos estadísticos avanzados para identificar patrones
+                        de desarrollo y factores asociados al bienestar infantil.
+                    </p>
+                </div>
+                <div class="method-item">
+                    <div class="method-number">03</div>
+                    <h3 class="method-title">Seguimiento Longitudinal</h3>
+                    <p class="method-text">
+                        Realizamos evaluaciones periódicas a lo largo del tiempo para
+                        documentar la evolución de los indicadores de desarrollo.
+                    </p>
+                </div>
+                <div class="method-item">
+                    <div class="method-number">04</div>
+                    <h3 class="method-title">Gestión de Calidad</h3>
+                    <p class="method-text">
+                        Mantenemos protocolos rigurosos de control de calidad para asegurar
+                        la integridad y confiabilidad de los datos recopilados.
+                    </p>
+                </div>
+            </div>
+            <div class="training-section">
+                <div class="training-content">
+                    <div class="training-icon">
+                        <svg viewBox="0 0 64 64" fill="none">
+                            <path d="M32 8l20 12-20 12-20-12 20-12z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M12 32l20 12 20-12M12 44l20 12 20-12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            <circle cx="32" cy="20" r="4" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="training-title">Capacitación AGENF</h3>
+                    <p class="training-text">
+                        El proyecto de capacitación AGENF fortalece las competencias técnicas y éticas del equipo de campo
+                        en la evaluación y abordaje respetuoso de las familias participantes, garantizando un trato
+                        ético y profesional en todas las interacciones.
+                    </p>
+                    <div class="training-tags">
+                        <span class="tag">Ética</span>
+                        <span class="tag">Técnica</span>
+                        <span class="tag">Respeto</span>
+                        <span class="tag">Profesionalismo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">CONTACTO</div>
+                <h2 class="section-title">Únete al Estudio</h2>
+                <p class="section-subtitle">
+                    Si tu hijo nació después del 7 de agosto de 2022, forma parte de esta investigación
+                </p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3 class="contact-title">Información de Contacto</h3>
+                    <div class="contact-item">
+                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <div>
+                            <span class="contact-label">Email</span>
+                            <a href="mailto:info@cohortevidaypaz.com.co" class="contact-value">info@cohortevidaypaz.com.co</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <div>
+                            <span class="contact-label">Ubicación</span>
+                            <span class="contact-value">Colombia</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <div>
+                            <span class="contact-label">Sitio Web</span>
+                            <a href="https://www.cohortevidaypaz.com.co" class="contact-value">www.cohortevidaypaz.com.co</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nombre Completo</label>
+                            <input type="text" id="name" name="name" required placeholder="Tu nombre completo">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico</label>
+                            <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Teléfono</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+57 300 123 4567">
+                        </div>
+                        <div class="form-group">
+                            <label for="childBirthDate">Fecha de Nacimiento del Niño/a</label>
+                            <input type="date" id="childBirthDate" name="childBirthDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Cuéntanos sobre tu interés en participar..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <span class="btn-text">Enviar Solicitud</span>
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <svg class="footer-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="footerLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#00f7ff;stop-opacity:1" />
+                                <stop offset="50%" style="stop-color:#7b2cbf;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#00f7ff;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="50" cy="50" r="45" fill="none" stroke="url(#footerLogoGradient)" stroke-width="2" opacity="0.3"/>
+                        <circle cx="50" cy="50" r="35" fill="none" stroke="url(#footerLogoGradient)" stroke-width="3"/>
+                        <path d="M50 15 L50 35 M50 65 L50 85 M15 50 L35 50 M65 50 L85 50" stroke="url(#footerLogoGradient)" stroke-width="3" stroke-linecap="round"/>
+                        <circle cx="50" cy="50" r="8" fill="url(#footerGradient)"/>
+                        <circle cx="50" cy="50" r="15" fill="none" stroke="url(#footerLogoGradient)" stroke-width="1.5"/>
+                    </svg>
+                    <h3 class="footer-title">Cohorte Vida y Paz</h3>
+                    <p class="footer-description">
+                        Generación de la Vida y de la Paz - Estudio longitudinal en Colombia
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <h4 class="footer-heading">Enlaces</h4>
+                    <ul class="footer-nav">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+                        <li><a href="#cohortes">Cohortes</a></li>
+                        <li><a href="#metodologia">Metodología</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4 class="footer-heading">Recursos</h4>
+                    <ul class="footer-nav">
+                        <li><a href="#">Documentación</a></li>
+                        <li><a href="#">Publicaciones</a></li>
+                        <li><a href="#">Prensa</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4 class="footer-heading">Legal</h4>
+                    <ul class="footer-nav">
+                        <li><a href="#">Privacidad</a></li>
+                        <li><a href="#">Términos</a></li>
+                        <li><a href="#">Ética</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2024 Cohorte Vida y Paz. Todos los derechos reservados.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23.95 4.57a10 10 0 01-2.82.77 4.96 4.96 0 002.16-2.72 9.9 9.9 0 01-3.13 1.2 4.92 4.92 0 00-8.38 4.48A13.97 13.97 0 011.67 3.15 4.93 4.93 0 003.2 9.72a4.86 4.86 0 01-2.23-.61v.06a4.93 4.93 0 003.95 4.83 4.9 4.9 0 01-2.22.08 4.93 4.93 0 004.6 3.42A9.87 9.87 0 010 19.54a13.94 13.94 0 007.55 2.21c9.06 0 14.01-7.51 14.01-14.01 0-.21 0-.42-.02-.63A10 10 0 0024 4.59z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.45 20.45H16.89v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.34V9h3.41v1.56h.05c.47-.89 1.63-1.83 3.36-1.83 3.59 0 4.25 2.36 4.25 5.43v6.29zM5.34 7.43c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm1.72 13.02H3.62V9h3.44v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
