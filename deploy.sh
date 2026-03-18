@@ -82,12 +82,20 @@ if [ ! -f .env ]; then
         print_message "Creando .env desde .env.example..."
         cp .env.example .env
         print_warning "Por favor, edita .env y configura las variables necesarias"
-        read -p "Presiona Enter para editar .env..." 
+        read -p "Presiona Enter para editar .env..."
         ${EDITOR:-nano} .env
     else
         print_error "No se encontró .env.example"
         exit 1
     fi
+fi
+
+# Verificar directorio images
+print_message "Verificando directorio images..."
+if [ ! -d images ]; then
+    print_message "Creando directorio images..."
+    mkdir -p images
+    touch images/.gitkeep
 fi
 
 # Detener contenedores existentes
