@@ -54,7 +54,7 @@ chmod 600 /etc/traefik/acme.json
 
 # Crear archivo de configuración de Traefik
 print_message "Creando archivo de configuración de Traefik..."
-cat > /etc/traefik/traefik.yml << 'EOF'
+cat > /etc/traefik/traefik.yml <<'EOF'
 # Traefik Configuration File
 # Generado automáticamente por setup-traefik.sh
 
@@ -130,8 +130,8 @@ echo ""
 print_message "Archivos creados:"
 print_message "  - /etc/traefik/traefik.yml (configuración)"
 print_message "  - /etc/traefik/acme.json (certificados SSL)"
-print_message "  - /var/log/traefik/ (logs)"
-print_message ""
+print_message "  - /var/log/traefik (logs)"
+echo ""
 print_message "Configuración predeterminada:"
 print_message "  - Email: admin@cohortevidaypaz.com.co"
 print_message "  - Dashboard: http://traefik.cohortevidaypaz.com.co:8080"
@@ -146,12 +146,12 @@ print_message "Para editar la configuración:"
 echo "  sudo nano /etc/traefik/traefik.yml"
 echo ""
 print_message "Para iniciar Traefik manualmente:"
-echo "  docker run -d \"
-echo "    --name traefik \"
-echo "    --network traefik-network \"
-echo "    -p 80:80 -p 443:443 -p 8080:8080 \"
-echo "    -v /var/run/docker.sock:/var/run/docker.sock \"
-echo "    -v /etc/traefik/acme.json:/acme.json \"
-echo "    -v /etc/traefik/traefik.yml:/etc/traefik/traefik.yml \"
+echo "  docker run -d \\"
+echo "    --name traefik \\"
+echo "    --network traefik-network \\"
+echo "    -p 80:80 -p 443:443 -p 8080:8080 \\"
+echo "    -v /var/run/docker.sock:/var/run/docker.sock \\"
+echo "    -v /etc/traefik/acme.json:/acme.json \\"
+echo "    -v /etc/traefik/traefik.yml:/etc/traefik/traefik.yml \\"
 echo "    traefik:v3.0"
 echo ""
