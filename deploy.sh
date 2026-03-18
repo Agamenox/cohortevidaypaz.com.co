@@ -16,12 +16,6 @@ GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
-# Variables globales
-DOCKER_COMPOSE=""
-COMPOSE_VERSION=""
-COMPOSE_FILE="docker-compose.yml"
-TRAEFIK_ENABLED="true"
-
 # Función para imprimir mensajes
 print_message() {
     echo -e "${GREEN}[INFO]${NC} $1"
@@ -80,8 +74,8 @@ print_message "Verificando configuración de Traefik..."
 if [ ! -f /etc/traefik/traefik.yml ]; then
     print_warning "No se encontró configuración de Traefik en /etc/traefik/traefik.yml"
     print_warning "¿Cómo deseas continuar?"
-    print_warning "  1. Configurar Traefik automáticamente (recomendado para producción)"
-    print_warning "  2. Usar modo standalone (sin Traefik, para pruebas locales)"
+    print_warning "  1. Configurar Traefik automáticamente"
+    print_warning "  2. Usar modo standalone (sin Traefik)"
     print_warning "  3. Cancelar"
     read -p "Selecciona una opción (1/2/3): " -n 1 -r
     echo
@@ -150,6 +144,14 @@ if [ ! -d images ]; then
     touch images/.gitkeep
 fi
 
+# IMPORTANTE: Eliminar archivo .env si existe para evitar warnings de Docker
+print_message "Preparando entorno de Docker..."
+if [ -f .env ]; then
+    print_warning "Renombrando .env a .env.bak para evitar warnings de Docker"
+    mv .env .env.bak
+    print_message "Docker no usará el archivo .env para evitar warnings de variables"
+fi
+
 # Detener contenedores existentes
 print_message "Deteniendo contenedores existentes..."
 $DOCKER_COMPOSE -f $COMPOSE_FILE down 2>/dev/null || true
@@ -177,7 +179,7 @@ if curl -s -o /dev/null -w "%{http_code}" http://localhost | grep -q "200"; then
     print_message "✓ Sitio web accesible en http://localhost"
 else
     print_error "✗ Error al acceder al sitio web"
-    print_message "Verifica los logs con: docker-compose logs -f"
+    print_message "Verifica los logs con: $DOCKER_COMPOSE -f $COMPOSE_FILE logs -f"
 fi
 
 echo ""
@@ -185,24 +187,18 @@ print_message "=========================================="
 print_message "Despliegue completado"
 print_message "=========================================="
 echo ""
+print_message "Comandos útiles:"
+print_message "  Ver estado: $DOCKER_COMPOSE -f $COMPOSE_FILE ps"
+print_message "  Ver logs: $DOCKER_COMPOSE -f $COMPOSE_FILE logs -f"
+print_message "  Reiniciar: $DOCKER_COMPOSE -f $COMPOSE_FILE restart"
+print_message "  Detener: $DOCKER_COMPOSE -f $COMPOSE_FILE down"
+echo ""
 if [ "$TRAEFIK_ENABLED" == "false" ]; then
     print_message "Modo: Standalone (sin Traefik)"
-    print_message ""
-    print_message "Comandos útiles:"
-    print_message "  Ver estado: $DOCKER_COMPOSE -f $COMPOSE_FILE ps"
-    print_message "  Ver logs: $DOCKER_COMPOSE -f $COMPOSE_FILE logs -f"
-    print_message "  Reiniciar: $DOCKER_COMPOSE -f $COMPOSE_FILE restart"
-    print_message "  Detener: $DOCKER_COMPOSE -f $COMPOSE_FILE down"
     echo ""
     print_message "Sitio web: http://localhost:8080"
 else
     print_message "Modo: Con Traefik (producción)"
-    print_message ""
-    print_message "Comandos útiles:"
-    print_message "  Ver estado: $DOCKER_COMPOSE -f $COMPOSE_FILE ps"
-    print_message "  Ver logs: $DOCKER_COMPOSE -f $COMPOSE_FILE logs -f"
-    print_message "  Reiniciar: $DOCKER_COMPOSE -f $COMPOSE_FILE restart"
-    print_message "  Detener: $DOCKER_COMPOSE -f $COMPOSE_FILE down"
     echo ""
     print_message "Dashboard de Traefik: http://traefik.cohortevidaypaz.com.co:8080"
     print_message "Sitio web: https://www.cohortevidaypaz.com.co"
