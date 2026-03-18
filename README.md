@@ -518,7 +518,7 @@ Las contribuciones son bienvenidas. Por favor:
 
 <div align="center">
 
-**© 2024 Cohorte Vida y Paz. Todos los derechos reservados.**
+**© 2024 Diseñado por Ingeniero Eli Godoy para Cohorte Vida y Paz. Todos los derechos reservados.**
 
 Este proyecto es propiedad exclusiva de Cohorte Vida y Paz.
 
