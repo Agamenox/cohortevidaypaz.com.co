@@ -1,6 +1,9 @@
+# Archivos de entorno
 .env
 .env.local
 .env.*.local
+
+# Archivos del sistema
 .DS_Store
 *.log
 node_modules/
@@ -13,6 +16,15 @@ coverage/
 *.swp
 *.swo
 *~
+
+# Configuración y backup
 acme.json
 backup-*.tar.gz
 backup-compose.yml
+
+# Directorio de documentación
+docs/
+
+# Excluir archivos markdown excepto README.md del root
+*.md
+!README.md
