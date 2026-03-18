@@ -154,24 +154,25 @@ fi
 
 # Detener contenedores existentes
 print_message "Deteniendo contenedores existentes..."
-$DOCKER_COMPOSE -f $COMPOSE_FILE down 2>/dev/null || true
+$DOCKER_COMPOSE -f "$COMPOSE_FILE" down 2>/dev/null || true
 
 # Construir imágenes
 print_message "Construyendo imágenes Docker..."
-$DOCKER_COMPOSE -f $COMPOSE_FILE build
+$DOCKER_COMPOSE -f "$COMPOSE_FILE" build
 
 # Levantar contenedores
 print_message "Levantando contenedores..."
-$DOCKER_COMPOSE -f $COMPOSE_FILE up -d
+$DOCKER_COMPOSE -f "$COMPOSE_FILE" up -d
 
 # Verificar estado
 print_message "Verificando estado de los contenedores..."
 sleep 5
-$DOCKER_COMPOSE -f $COMPOSE_FILE ps
+# shellcheck disable=SC2086
+$DOCKER_COMPOSE -f "$COMPOSE_FILE" ps
 
 # Verificar logs
 print_message "Verificando logs..."
-$DOCKER_COMPOSE -f $COMPOSE_FILE logs --tail=20
+$DOCKER_COMPOSE -f "$COMPOSE_FILE" logs --tail=20
 
 # Prueba de conexión
 print_message "Probando conexión..."
