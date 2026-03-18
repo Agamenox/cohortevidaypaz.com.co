@@ -49,11 +49,25 @@ print_message "Docker instalado: $(docker --version)"
 
 # Verificar Docker Compose
 print_message "Verificando Docker Compose..."
-if ! command -v docker-compose &> /dev/null; then
+if command -v docker &> /dev/null; then
+    # Verificar si está docker compose (nuevo formato)
+    if docker compose version &> /dev/null 2>&1; then
+        DOCKER_COMPOSE="docker compose"
+        COMPOSE_VERSION=$(docker compose version --short 2>&1)
+        print_message "Docker Compose instalado: $COMPOSE_VERSION (nuevo formato)"
+    # Verificar si está docker-compose (formato antiguo)
+    elif command -v docker-compose &> /dev/null; then
+        DOCKER_COMPOSE="docker-compose"
+        COMPOSE_VERSION=$(docker-compose --version 2>&1)
+        print_message "Docker Compose instalado: $COMPOSE_VERSION (formato antiguo)"
+    else
+        print_error "Docker Compose no está instalado"
+        exit 1
+    fi
+else
     print_error "Docker Compose no está instalado"
     exit 1
 fi
-print_message "Docker Compose instalado: $(docker-compose --version)"
 
 # Verificar configuración de Traefik
 print_message "Verificando configuración de Traefik..."
@@ -100,24 +114,24 @@ fi
 
 # Detener contenedores existentes
 print_message "Deteniendo contenedores existentes..."
-docker-compose down 2>/dev/null || true
+$DOCKER_COMPOSE down 2>/dev/null || true
 
 # Construir imágenes
 print_message "Construyendo imágenes Docker..."
-docker-compose build --no-cache
+$DOCKER_COMPOSE build --no-cache
 
 # Levantar contenedores
 print_message "Levantando contenedores..."
-docker-compose up -d
+$DOCKER_COMPOSE up -d
 
 # Verificar estado
 print_message "Verificando estado de los contenedores..."
 sleep 5
-docker-compose ps
+$DOCKER_COMPOSE ps
 
 # Verificar logs
 print_message "Verificando logs..."
-docker-compose logs --tail=20
+$DOCKER_COMPOSE logs --tail=20
 
 # Prueba de conexión
 print_message "Probando conexión..."
@@ -134,10 +148,10 @@ print_message "Despliegue completado"
 print_message "=========================================="
 echo ""
 print_message "Comandos útiles:"
-print_message "  Ver estado: docker-compose ps"
-print_message "  Ver logs: docker-compose logs -f"
-print_message "  Reiniciar: docker-compose restart"
-print_message "  Detener: docker-compose down"
+print_message "  Ver estado: $DOCKER_COMPOSE ps"
+print_message "  Ver logs: $DOCKER_COMPOSE logs -f"
+print_message "  Reiniciar: $DOCKER_COMPOSE restart"
+print_message "  Detener: $DOCKER_COMPOSE down"
 echo ""
 print_message "Dashboard de Traefik: http://traefik.cohortevidaypaz.com.co:8080"
 print_message "Sitio web: https://www.cohortevidaypaz.com.co"

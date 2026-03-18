@@ -165,7 +165,7 @@ c731c7f Merge: Resolución de conflictos en README.md
 ### Configuración Docker
 - ✅ Dockerfile optimizado
 - ✅ nginx.conf configurado
-- ✅ docker-compose.yml con Traefik
+- ✅ docker compose.yml con Traefik
 - ✅ Health check configurado
 - ✅ Imagen construida y probada
 

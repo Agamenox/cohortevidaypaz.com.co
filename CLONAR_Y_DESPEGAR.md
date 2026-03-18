@@ -91,10 +91,10 @@ sudo ufw enable
 
 ```bash
 # Ver estado de contenedores
-docker-compose ps
+docker compose ps
 
 # Ver logs
-docker-compose logs -f
+docker compose logs -f
 ```
 
 ### 9️⃣ Probar el Sitio Web
@@ -117,41 +117,41 @@ cd /var/www/cohortevidaypaz.com.co
 git pull origin main
 
 # Reconstruir y levantar contenedores
-docker-compose up -d --build
+docker compose up -d --build
 ```
 
 ### Ver Estado de Contenedores
 
 ```bash
-docker-compose ps
+docker compose ps
 ```
 
 ### Ver Logs
 
 ```bash
 # Ver todos los logs
-docker-compose logs -f
+docker compose logs -f
 
 # Ver logs de un servicio específico
-docker-compose logs -f web
-docker-compose logs -f traefik
+docker compose logs -f web
+docker compose logs -f traefik
 ```
 
 ### Reiniciar Servicios
 
 ```bash
 # Reiniciar todos
-docker-compose restart
+docker compose restart
 
 # Reiniciar un servicio específico
-docker-compose restart web
-docker-compose restart traefik
+docker compose restart web
+docker compose restart traefik
 ```
 
 ### Detener Servicios
 
 ```bash
-docker-compose down
+docker compose down
 ```
 
 ### Ver Uso de Recursos
@@ -194,7 +194,7 @@ docker logs traefik -f
    ```bash
    cd /var/www/cohortevidaypaz.com.co
    git pull origin main
-   docker-compose up -d --build
+   docker compose up -d --build
    ```
 
 ## 🆘 Solución de Problemas
@@ -203,10 +203,10 @@ docker logs traefik -f
 
 ```bash
 # Ver logs de errores
-docker-compose logs
+docker compose logs
 
 # Verificar configuración
-docker-compose config
+docker compose config
 ```
 
 ### Certificados SSL no se generan
@@ -223,7 +223,7 @@ docker logs traefik -f
 
 ```bash
 # Verificar contenedores
-docker-compose ps
+docker compose ps
 
 # Verificar puertos
 netstat -tuln | grep -E ':(80|443)'

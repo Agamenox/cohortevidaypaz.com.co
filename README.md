@@ -147,7 +147,7 @@ cohorte-vidaypaz/
 ├── 🖼️ images/                     # Directorio para imágenes
 ├── 🐳 Dockerfile                  # Configuración de Docker
 ├── ⚙️ nginx.conf                  # Configuración de Nginx
-├── 🔄 docker-compose.yml          # Orquestación con Traefik
+├── 🔄 docker compose.yml          # Orquestación con Traefik
 ├── 📝 .dockerignore              # Archivos ignorados en Docker
 ├── 🔒 .env.example                # Plantilla de variables de entorno
 ├── ⚙️ traefik.yml.example        # Configuración de Traefik
@@ -178,7 +178,7 @@ cp .env.example .env
 nano .env
 
 # 3. Desplegar
-docker-compose up -d --build
+docker compose up -d --build
 
 # 4. ¡Listo! 🎉
 # Acceder a: http://localhost
@@ -188,13 +188,13 @@ docker-compose up -d --build
 
 ```bash
 # Verificar contenedores
-docker-compose ps
+docker compose ps
 
 # Ver logs
-docker-compose logs -f
+docker compose logs -f
 
 # Detener
-docker-compose down
+docker compose down
 ```
 
 ---
@@ -235,12 +235,12 @@ sudo sh get-docker.sh
 sudo usermod -aG docker $USER
 
 # Instalar Docker Compose
-sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
+sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker compose
+sudo chmod +x /usr/local/bin/docker compose
 
 # Verificar instalación
 docker --version
-docker-compose --version
+docker compose --version
 ```
 
 #### 3️⃣ Configurar Traefik
@@ -290,17 +290,17 @@ nano .env
 # Copiar el resultado en TRAEFIK_BASIC_AUTH en .env
 
 # Construir y levantar los contenedores
-docker-compose up -d --build
+docker compose up -d --build
 ```
 
 #### 6️⃣ Verificar el Despliegue
 
 ```bash
 # Verificar contenedores
-docker-compose ps
+docker compose ps
 
 # Ver logs
-docker-compose logs -f
+docker compose logs -f
 
 # Probar el sitio
 curl -I http://localhost
@@ -335,33 +335,33 @@ Verificar que el certificado SSL esté activo.
 
 ```bash
 # Ver estado
-docker-compose ps
+docker compose ps
 
 # Ver logs en tiempo real
-docker-compose logs -f
+docker compose logs -f
 
 # Ver logs de un servicio específico
-docker-compose logs -f web
-docker-compose logs -f traefik
+docker compose logs -f web
+docker compose logs -f traefik
 
 # Reiniciar aplicación
-docker-compose restart
+docker compose restart
 
 # Reiniciar un servicio específico
-docker-compose restart web
-docker-compose restart traefik
+docker compose restart web
+docker compose restart traefik
 
 # Detener aplicación
-docker-compose down
+docker compose down
 
 # Detener y eliminar volúmenes
-docker-compose down -v
+docker compose down -v
 
 # Reconstruir imágenes
-docker-compose build
+docker compose build
 
 # Levantar y construir
-docker-compose up -d --build
+docker compose up -d --build
 ```
 
 ### 🔄 Actualizaciones
@@ -371,7 +371,7 @@ docker-compose up -d --build
 git pull origin main
 
 # Reconstruir y levantar
-docker-compose up -d --build
+docker compose up -d --build
 ```
 
 ### 🧹 Limpieza
@@ -391,7 +391,7 @@ docker volume prune
 
 ```bash
 # Ver configuración
-docker-compose config
+docker compose config
 
 # Ver recursos utilizados
 docker stats

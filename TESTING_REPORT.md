@@ -16,7 +16,7 @@ Se ha creado un proyecto completo de sitio web para "Cohorte Vida y Paz" con dis
 - `js/app.js` (135 líneas) - JavaScript para interactividad
 - `Dockerfile` (20 líneas) - Configuración de Docker
 - `nginx.conf` (64 líneas) - Configuración de Nginx
-- `docker-compose.yml` (60 líneas) - Orquestación con Traefik
+- `docker compose.yml` (60 líneas) - Orquestación con Traefik
 
 **Archivos de configuración:**
 - `.env.example` - Plantilla de variables de entorno
@@ -249,7 +249,7 @@ Se ha creado un proyecto completo de sitio web para "Cohorte Vida y Paz" con dis
 
 ### 1. Validación de Docker Compose
 ```bash
-docker-compose config > /dev/null 2>&1
+docker compose config > /dev/null 2>&1
 ```
 **Resultado:** ✓ Docker Compose válido
 
@@ -309,8 +309,8 @@ grep -E "(<html|</html>|<head|</head>|<body|</body>|<title|</title>)" index.html
 
 2. **Verificar contenedores:**
    ```bash
-   docker-compose ps
-   docker-compose logs -f
+   docker compose ps
+   docker compose logs -f
    ```
 
 ### Después del Despliegue:

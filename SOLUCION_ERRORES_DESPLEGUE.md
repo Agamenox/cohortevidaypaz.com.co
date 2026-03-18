@@ -155,14 +155,14 @@ Después del despliegue, verificar:
 
 ### 1. Verificar Contenedores
 ```bash
-docker-compose ps
+docker compose ps
 ```
 
 Esperado: `Up` con estado healthy
 
 ### 2. Verificar Logs
 ```bash
-docker-compose logs -f
+docker compose logs -f
 ```
 
 Esperado: Sin errores de Nginx
@@ -189,8 +189,8 @@ Si los errores persisten:
 
 1. **Verificar Logs Detallados:**
    ```bash
-   docker-compose logs web --tail=100
-   docker-compose logs traefik --tail=100
+   docker compose logs web --tail=100
+   docker compose logs traefik --tail=100
    ```
 
 2. **Verificar Configuración de Nginx:**

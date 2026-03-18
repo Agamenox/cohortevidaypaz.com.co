@@ -64,29 +64,42 @@ docker-compose logs -f
 
 ### Ver estado
 ```bash
+# El comando correcto se detecta automáticamente
+docker compose ps
+# o en versiones antiguas:
 docker-compose ps
 ```
 
 ### Ver logs
 ```bash
+docker compose logs -f
+# o:
 docker-compose logs -f
 ```
 
 ### Reiniciar
 ```bash
+docker compose restart
+# o:
 docker-compose restart
 ```
 
 ### Detener
 ```bash
+docker compose down
+# o:
 docker-compose down
 ```
 
 ### Actualizar
 ```bash
 git pull
+docker compose up -d --build
+# o:
 docker-compose up -d --build
 ```
+
+**Nota:** El script `deploy.sh` detecta automáticamente si usar `docker compose` (nuevo) o `docker-compose` (antiguo).
 
 ## 🌐 URLs
 
