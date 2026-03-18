@@ -158,7 +158,7 @@ $DOCKER_COMPOSE -f $COMPOSE_FILE down 2>/dev/null || true
 
 # Construir imágenes
 print_message "Construyendo imágenes Docker..."
-$DOCKER_COMPOSE -f $COMPOSE_FILE build --no-cache
+$DOCKER_COMPOSE -f $COMPOSE_FILE build
 
 # Levantar contenedores
 print_message "Levantando contenedores..."
